@@ -16,7 +16,7 @@
       '(("marmalade" . "http://marmalade-repo.org/packages/")
         ("melpa" . "http://melpa.milkbox.net/packages/")))
 ; FIXME need a way to do this regularly, but not every launch
-;(package-refresh-contents)
+(package-refresh-contents)
 (package-initialize)
 
 ;; packages
@@ -28,4 +28,12 @@
   :ensure t
   :init
   (progn
-    (helm-mode))
+    (helm-mode)))
+
+(use-package projectile
+  :ensure t)
+
+;; built in package config
+;; org mode
+(setq org-agenda-files '("~/Documents/animated-ironman/org"))
+
