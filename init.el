@@ -1,10 +1,9 @@
-;;; cribbed from https://github.com/jordonbiondo/.emacs.d/blob/master/init.el
 
 
 ;; initial setup
-(setq visible-bell 1)
-
+(setq inhibit-startup-message t)
 (tool-bar-mode -1)
+(setq visible-bell 1)
 
 ;; package manager configuration
 (mapc (lambda (p) (push p load-path))
@@ -16,7 +15,8 @@
 (mapc (lambda(p) (push p package-archives))
       '(("marmalade" . "http://marmalade-repo.org/packages/")
         ("melpa" . "http://melpa.milkbox.net/packages/")))
-(package-refresh-contents)
+; FIXME need a way to do this regularly, but not every launch
+;(package-refresh-contents)
 (package-initialize)
 
 ;; packages
