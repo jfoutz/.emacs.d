@@ -50,7 +50,10 @@
   :ensure t)
 
 (use-package flycheck
-  :ensure t)
+  :ensure t
+  :init
+  (progn
+    (add-hook 'after-init-hook #'global-flycheck-mode)))
 
 ; groovy mode issue - remove someday
 (require 'cl)
@@ -67,6 +70,17 @@
     (activate-malabar-mode)
     (add-hook 'malabar-java-mode-hook 'flycheck-mode)
     (add-hook 'malabar-groovy-mode-hook 'flycheck-mode)))
+
+(use-package rust-mode
+  :ensure t)
+
+(use-package flycheck-rust
+  :ensure t
+  :init
+  (progn
+    (setq flycheck-rust-executable "/usr/local/bin/rustc")
+    (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)))
+
 
 ;; built in package config
 ;; org mode
