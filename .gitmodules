@@ -4,3 +4,4 @@
 [submodule "cedet"]
 	path = cedet
 	url = git@github.com:alexott/cedet.git
+    ignore = untracked
