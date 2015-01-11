@@ -32,7 +32,7 @@
   (("M-x" . helm-M-x)
    ("M-y" . helm-show-kill-ring)
    ("C-x b" . helm-mini)
-   ("C-c h g" . helm-google-suggest)
+   ("C-c h g" . helm-google-suggest))
   :init
   (progn
     (setq helm-M-x-fuzzy-match t
