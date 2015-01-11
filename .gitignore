@@ -18,4 +18,5 @@ skewer-cache
 /.litable-lists.el
 /srecode-map.el
 
+/projectile-bookmarks.eld
 
